@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
+  namespace: saecom
 spec:
   accessModes:
   - ReadWriteOnce
@@ -15,6 +16,7 @@ apiVersion: v1
 kind: ConfigMap 
 metadata:
   name: postgres-secret
+  namespace: saecom
   labels:
     app: postgres
 data:
@@ -27,6 +29,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-deployment
+  namespace: saecom
   labels:
     app: postgres
 spec:
@@ -67,6 +70,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres-service
+  namespace: saecom
 spec:
   selector:
     app: postgres
@@ -79,6 +83,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: postgres-storage-class
+  namespace: saecom
 provisioner: disk.csi.azure.com
 allowVolumeExpansion: true
 reclaimPolicy: Retain
@@ -90,6 +95,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ecomapi-deployment
+  namespace: saecom
   labels:
     app: ecomapideploy
 spec:
@@ -120,6 +126,7 @@ apiVersion: v1
 kind: Service 
 metadata:
   name: ecomm-backend-service
+  namespace: saecom
   labels:
     app: ecomm-backend-service
 spec:
@@ -135,6 +142,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ecomm-frontend-deployment
+  namespace: saecom
   labels:
     app: frontend
 spec:
@@ -165,6 +173,7 @@ apiVersion: v1
 kind: Service 
 metadata:
   name: ecomm-frontend-service
+  namespace: saecom
   labels:
     app: frontend
 spec:
