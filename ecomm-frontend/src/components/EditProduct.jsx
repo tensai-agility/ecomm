@@ -74,7 +74,7 @@ function EditProduct(){
         <div className="container-fluid">
                     <div className="row">
                         <div class="col-sm-3">
-                            <img width="300" src={"http://127.0.0.1:8887/"+product.photo} />
+                            <img width="300" src={BASE_API_URL+"/"+product.photo} />
                         </div>
                         <div className="col-sm-9">
                             <h4 className="text-center p-2">

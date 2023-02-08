@@ -59,7 +59,7 @@ function AddProduct(){
             // formData.append("subcat",product.subcat)
             // formData.append("sellerId",sellerid)
             console.log(product)
-            axios.post("http://20.235.11.102:3000/api/products/saveProduct",formData)
+            axios.post(BASE_API_URL + "/api/products/saveProduct",formData)
             .then(resp=>{
                 if (resp.data.status === 'success') {
                     let result=resp.data.data;
