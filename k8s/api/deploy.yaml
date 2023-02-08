@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ecomapi-deployment
+  namespace: saecom
   labels:
     app: ecomapideploy
 spec:
@@ -18,7 +19,7 @@ spec:
     spec:
       containers:
       - name: ecomapicon
-        image: hexadevops/ecomapi:latest
+        image: hexadevops/ecombackend:latest
         ports:
         - containerPort: 8080
         #resources:

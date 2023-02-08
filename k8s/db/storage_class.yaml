@@ -2,6 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: postgres-storage-class
+  namespace: saecom
 provisioner: disk.csi.azure.com
 allowVolumeExpansion: true
 reclaimPolicy: Retain
