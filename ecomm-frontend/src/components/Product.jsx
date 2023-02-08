@@ -8,7 +8,7 @@ function Product(props){
                     <h5 className="label_color">{x.pname}</h5>
                 </div>
                 <div className="card-body py-1" style={{width:"100%",height:"250px",margin:"1rem 0"}} >
-                <img style={{maxWidth:"100%",maxHeight:"100%"}} src={"http://20.81.84.248:8080/"+x.photo} className="img-thumnail" />
+                <img style={{maxWidth:"100%",maxHeight:"100%"}} src={BASE_API_URL+"/"+x.photo} className="img-thumnail" />
                 <h6 className="float-left">Brand :{x.brand}</h6>                
                 <h6 className="float-right">Price: &#8377; {x.price}</h6>                           
                 </div>
