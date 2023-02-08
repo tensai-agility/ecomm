@@ -1,0 +1,10 @@
+FROM node:latest
+COPY ecomm-frontend/ /src/app/ecom/
+WORKDIR /src/app/ecom/
+RUN npm install -g npm@latest
+RUN chmod +x node_modules/.bin/react-scripts
+RUN npm run build
+RUN npm install -g serve
+
+EXPOSE 3000
+ENTRYPOINT ["serve", "-s", "build"]

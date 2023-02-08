@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: ecomm-backend-service
+  labels:
+    app: ecomm-backend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: ecomapipod
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
