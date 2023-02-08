@@ -11,7 +11,7 @@
 
 # Running on local system:
 - If you want to execute/run this project in your local system follow these steps:
-- Git clone this project using this link [right click and copy link address](https://github.com/RohanWork/shopper-zone.git)
+- Git clone this project 
 
 ***For backend part***
 - After that open backend folder in spring tool suite (STS) or download from here [link](https://spring.io/tools)
