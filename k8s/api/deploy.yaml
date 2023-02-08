@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ecomapi-deployment
+  namespace: saecom
   labels:
     app: ecomapideploy
 spec:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ecomm-frontend-deployment
+  namespace: saecom
   labels:
     app: frontend
 spec:
