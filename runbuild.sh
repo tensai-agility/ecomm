@@ -4,6 +4,5 @@ docker image build --no-cache -f Dockerfile.ecomapi -t  hexadevops/ecombackend:l
 docker image build --no-cache -f Dockerfile.ecomui -t hexadevops/ecomfrontend:latest .
 docker push hexadevops/ecombackend:latest
 docker push hexadevops/ecomfrontend:latest
-
 #kubectl exec -it postgres-deployment-6d46c57765-lqhpc -n saecom -- bash
 #psql -Utensai --password ecommerce
