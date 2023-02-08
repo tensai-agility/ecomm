@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: ecomm-frontend
-        image: hexadevops/ecomui:latest
+        image: hexadevops/ecomfrontend:latest
         ports:
         - containerPort: 3000
         #resources:
